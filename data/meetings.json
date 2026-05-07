@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-07T06:00:00",
+  "last_updated": "2026-05-07T21:00:26",
   "meetings": [
     {
       "id": "386028",
@@ -8,60 +8,125 @@
       "video_url": "https://louisvilleky.new.swagit.com/videos/386028",
       "appropriations": [
         {
-          "item": 1, "type": "NDF", "amount": 636.60,
-          "districts": ["5"], "recipient": "Public Works",
+          "item": 1,
+          "type": "NDF",
+          "amount": 636.6,
+          "districts": [
+            "5"
+          ],
+          "recipient": "Public Works",
           "purpose": "Installation of one street light near 806 South 35th Street",
-          "sponsor": "Councilmember Purvis", "vote": "Passed"
+          "sponsor": "Councilmember Purvis",
+          "vote": "Passed"
         },
         {
-          "item": 2, "type": "NDF", "amount": 858.00,
-          "districts": ["5"], "recipient": "Public Works",
+          "item": 2,
+          "type": "NDF",
+          "amount": 858.0,
+          "districts": [
+            "5"
+          ],
+          "recipient": "Public Works",
           "purpose": "Installation of one street light on West Main Street between South 19th and South 20th Streets",
-          "sponsor": "Councilmember Purvis", "vote": "Passed"
+          "sponsor": "Councilmember Purvis",
+          "vote": "Passed"
         },
         {
-          "item": 3, "type": "NDF", "amount": 4117.33,
-          "districts": ["7"], "recipient": "Office of Equity",
-          "purpose": "Activities related to the Juneteenth Jubilee — award ceremony, reception, and awardees",
-          "sponsor": "Councilmember McCraney", "vote": "Passed (amended from $5,000)"
+          "item": 3,
+          "type": "NDF",
+          "amount": 4117.33,
+          "districts": [
+            "7"
+          ],
+          "recipient": "Office of Equity",
+          "purpose": "Activities related to the Juneteenth Jubilee \u2014 award ceremony, reception, and awardees",
+          "sponsor": "Councilmember McCraney",
+          "vote": "Passed (amended from $5,000)"
         },
         {
-          "item": 4, "type": "NDF", "amount": 12000.00,
-          "districts": ["3","6","7","8","9","12","15","17","20","24"],
+          "item": 4,
+          "type": "NDF",
+          "amount": 12000.0,
+          "districts": [
+            "3",
+            "6",
+            "7",
+            "8",
+            "9",
+            "12",
+            "15",
+            "17",
+            "20",
+            "24"
+          ],
           "recipient": "Louisville Independent Business Alliance",
           "purpose": "2026 Buy Local Fair",
-          "sponsor": "Multiple councilmembers", "vote": "Passed"
+          "sponsor": "Multiple councilmembers",
+          "vote": "Passed"
         },
         {
-          "item": 5, "type": "NDF", "amount": 5000.00,
-          "districts": ["9"], "recipient": "Public Works",
-          "purpose": "Sidewalk installation — specific location TBD",
-          "sponsor": "Councilmember Flood", "vote": "Passed"
+          "item": 5,
+          "type": "NDF",
+          "amount": 5000.0,
+          "districts": [
+            "9"
+          ],
+          "recipient": "Public Works",
+          "purpose": "Sidewalk installation \u2014 specific location TBD",
+          "sponsor": "Councilmember Flood",
+          "vote": "Passed"
         },
         {
-          "item": 6, "type": "NDF", "amount": 8500.00,
-          "districts": ["20","26"], "recipient": "Louisville Metro Police",
+          "item": 6,
+          "type": "NDF",
+          "amount": 8500.0,
+          "districts": [
+            "20",
+            "26"
+          ],
+          "recipient": "Louisville Metro Police",
           "purpose": "Flock camera installation for public safety",
-          "sponsor": "Councilmembers Costello & Bowman", "vote": "Passed"
+          "sponsor": "Councilmembers Costello & Bowman",
+          "vote": "Passed"
         },
         {
-          "item": 7, "type": "NDF", "amount": 15000.00,
-          "districts": ["21"], "recipient": "Parks & Recreation",
+          "item": 7,
+          "type": "NDF",
+          "amount": 15000.0,
+          "districts": [
+            "21"
+          ],
+          "recipient": "Parks & Recreation",
           "purpose": "Skate park planning study",
-          "sponsor": "Councilmember Flood", "vote": "Passed"
+          "sponsor": "Councilmember Flood",
+          "vote": "Passed"
         },
         {
-          "item": 8, "type": "NDF", "amount": 10000.00,
-          "districts": ["6"], "recipient": "Kentucky Shakespeare Festival",
+          "item": 8,
+          "type": "NDF",
+          "amount": 10000.0,
+          "districts": [
+            "6"
+          ],
+          "recipient": "Kentucky Shakespeare Festival",
           "purpose": "Support for Kentucky Shakespeare Festival programming",
-          "sponsor": "Councilmember Hollander", "vote": "Passed"
+          "sponsor": "Councilmember Hollander",
+          "vote": "Passed"
         },
         {
-          "item": 9, "type": "NDF", "amount": 20000.00,
-          "districts": ["12","13","14","25"],
+          "item": 9,
+          "type": "NDF",
+          "amount": 20000.0,
+          "districts": [
+            "12",
+            "13",
+            "14",
+            "25"
+          ],
           "recipient": "Southwest Music Series",
           "purpose": "Inaugural Southwest Music Series community events",
-          "sponsor": "Multiple councilmembers", "vote": "Passed"
+          "sponsor": "Multiple councilmembers",
+          "vote": "Passed"
         }
       ]
     },
@@ -72,23 +137,42 @@
       "video_url": "https://louisvilleky.new.swagit.com/videos/385100",
       "appropriations": [
         {
-          "item": 1, "type": "NDF", "amount": 25000.00,
-          "districts": ["4"], "recipient": "Shawnee Neighborhood Association",
+          "item": 1,
+          "type": "NDF",
+          "amount": 25000.0,
+          "districts": [
+            "4"
+          ],
+          "recipient": "Shawnee Neighborhood Association",
           "purpose": "Neighborhood beautification and community garden project",
-          "sponsor": "Councilmember James", "vote": "Passed"
+          "sponsor": "Councilmember James",
+          "vote": "Passed"
         },
         {
-          "item": 2, "type": "CIF", "amount": 75000.00,
-          "districts": ["1","2","3"],
+          "item": 2,
+          "type": "CIF",
+          "amount": 75000.0,
+          "districts": [
+            "1",
+            "2",
+            "3"
+          ],
           "recipient": "Public Works",
-          "purpose": "Street resurfacing — multiple West Louisville corridors",
-          "sponsor": "Council leadership", "vote": "Passed"
+          "purpose": "Street resurfacing \u2014 multiple West Louisville corridors",
+          "sponsor": "Council leadership",
+          "vote": "Passed"
         },
         {
-          "item": 3, "type": "NDF", "amount": 3500.00,
-          "districts": ["6"], "recipient": "Portland Museum",
+          "item": 3,
+          "type": "NDF",
+          "amount": 3500.0,
+          "districts": [
+            "6"
+          ],
+          "recipient": "Portland Museum",
           "purpose": "Summer programming for neighborhood youth",
-          "sponsor": "Councilmember Hollander", "vote": "Passed"
+          "sponsor": "Councilmember Hollander",
+          "vote": "Passed"
         }
       ]
     }
