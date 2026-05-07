@@ -24,15 +24,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Raleway', sans-serif; background: var(--off); color: var(--text); min-height: 100vh; }
-
-    /* ── HEADER ── */
-    .site-header {
-      background: var(--deep);
-      padding: 0 24px;
-      display: flex; align-items: stretch; justify-content: space-between; gap: 16px;
-      position: sticky; top: 0; z-index: 100;
-      border-bottom: 3px solid var(--yellow);
-    }
+    .site-header { background: var(--deep); padding: 0 24px; display: flex; align-items: stretch; justify-content: space-between; gap: 16px; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--yellow); }
     .header-brand { display: flex; align-items: center; gap: 14px; padding: 14px 0; text-decoration: none; }
     .header-logo { width: 36px; height: 36px; background: var(--yellow); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--deep); flex-shrink: 0; }
     .header-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--white); letter-spacing: 1px; line-height: 1; }
@@ -41,8 +33,6 @@
     .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; animation: pulse 2s infinite; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
     .status-text { font-size: 11px; color: rgba(255,255,255,.6); font-weight: 500; }
-
-    /* ── HERO ── */
     .hero { background: linear-gradient(135deg, var(--deep) 0%, var(--mid) 100%); padding: 36px 24px 28px; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(116,89,164,.25) 0%, transparent 70%); pointer-events: none; }
     .hero-inner { max-width: 960px; margin: 0 auto; position: relative; }
@@ -52,14 +42,10 @@
     .hero-stats { display: flex; flex-wrap: wrap; gap: 10px; }
     .stat-pill { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.15); border-radius: 99px; padding: 5px 14px; font-size: 12px; color: var(--white); font-weight: 600; }
     .stat-pill span { color: var(--yellow); }
-
-    /* ── SUBSCRIBE ── */
     .subscribe-bar { background: var(--yellow); padding: 14px 24px; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
     .subscribe-bar p { font-size: 13px; font-weight: 700; color: var(--deep); }
     .subscribe-btn { background: var(--deep); color: var(--white); padding: 8px 20px; border-radius: 99px; font-family: 'Raleway', sans-serif; font-size: 12px; font-weight: 700; text-decoration: none; transition: background .15s; }
     .subscribe-btn:hover { background: var(--mid); }
-
-    /* ── COMMITTEE NAV ── */
     .committee-nav { background: var(--white); border-bottom: 1px solid var(--border); position: sticky; top: 67px; z-index: 90; }
     .committee-nav-inner { max-width: 960px; margin: 0 auto; display: flex; overflow-x: auto; scrollbar-width: none; }
     .committee-nav-inner::-webkit-scrollbar { display: none; }
@@ -68,8 +54,6 @@
     .c-tab.active { color: var(--deep); border-bottom-color: var(--yellow); }
     .c-tab .c-count { display: inline-block; font-size: 10px; background: var(--off); border: 1px solid var(--border); border-radius: 99px; padding: 1px 6px; margin-left: 5px; color: var(--muted); font-weight: 700; }
     .c-tab.active .c-count { background: var(--yellow); border-color: var(--yellow); color: var(--deep); }
-
-    /* ── TOOLBAR ── */
     .toolbar { background: var(--white); border-bottom: 1px solid var(--border); padding: 12px 24px; }
     .toolbar-inner { max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
     .search-wrap { position: relative; flex: 1; min-width: 180px; }
@@ -79,16 +63,10 @@
     select { padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-family: 'Raleway', sans-serif; font-size: 13px; color: var(--text); background: var(--off); outline: none; cursor: pointer; }
     select:focus { border-color: var(--light); }
     .result-count { font-size: 12px; color: var(--muted); font-weight: 600; margin-left: auto; }
-
-    /* ── MAIN ── */
     .main { max-width: 960px; margin: 0 auto; padding: 24px; }
-
-    /* ── COMMITTEE HEADER ── */
     .committee-header { margin-bottom: 20px; }
     .committee-title { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--deep); letter-spacing: .5px; }
     .committee-desc { font-size: 13px; color: var(--muted); margin-top: 4px; }
-
-    /* ── SUMMARY CARDS ── */
     .summary-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap: 10px; margin-bottom: 24px; }
     .s-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 14px; position: relative; overflow: hidden; }
     .s-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; }
@@ -99,16 +77,12 @@
     .s-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 5px; }
     .s-value { font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--deep); line-height: 1; }
     .s-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
-
-    /* ── MEETING GROUPS ── */
     .meeting-group { margin-bottom: 24px; }
     .meeting-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: var(--deep); color: var(--white); border-radius: 10px 10px 0 0; gap: 12px; flex-wrap: wrap; }
     .meeting-date { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: .5px; }
     .meeting-committee-label { font-size: 10px; color: var(--yellow); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
     .meeting-link { font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 99px; text-decoration: none; background: rgba(255,255,255,.12); color: var(--white); border: 1px solid rgba(255,255,255,.2); transition: background .15s; }
     .meeting-link:hover { background: rgba(255,255,255,.22); }
-
-    /* ── TABLE ── */
     .table-wrap { background: var(--white); border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px; overflow: hidden; }
     table { width: 100%; border-collapse: collapse; }
     thead tr { background: var(--off); border-bottom: 1px solid var(--border); }
@@ -117,55 +91,37 @@
     tbody tr:last-child { border-bottom: none; }
     tbody tr:hover { background: var(--off); }
     td { padding: 11px 14px; font-size: 13px; vertical-align: top; line-height: 1.4; }
-
-    /* ── BADGES ── */
     .type-badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px; border-radius: 99px; letter-spacing: .5px; white-space: nowrap; }
-    .type-ndf  { background: #EDE5F5; color: var(--mid); }
-    .type-cif  { background: #FDE8E5; color: #B5341F; }
+    .type-ndf { background: #EDE5F5; color: var(--mid); }
+    .type-cif { background: #FDE8E5; color: #B5341F; }
     .type-zone { background: #E5F0FD; color: #185FA5; }
     .type-ordinance { background: #E5F5EA; color: #2D7A3A; }
     .type-resolution { background: #FEF6E4; color: #8B5E00; }
     .type-budget { background: #F0EDF7; color: var(--deep); }
     .type-policy { background: #F5F0E5; color: #6B4A00; }
-
-    /* ── DISTRICTS ── */
     .districts-cell { display: flex; flex-wrap: wrap; gap: 3px; }
     .d-tag { font-size: 10px; font-weight: 700; background: var(--deep); color: var(--white); padding: 1px 6px; border-radius: 4px; }
     .d-all { font-size: 11px; color: var(--muted); font-style: italic; }
-
-    /* ── AMOUNT ── */
     .amount-cell { font-family: 'Bebas Neue', sans-serif; font-size: 16px; color: var(--deep); white-space: nowrap; }
-
-    /* ── RESULT ── */
-    .result-passed  { color: var(--green); font-weight: 600; font-size: 12px; }
-    .result-failed  { color: var(--red); font-weight: 600; font-size: 12px; }
-    .result-tabled  { color: var(--muted); font-weight: 600; font-size: 12px; }
-    .result-other   { color: var(--muted); font-size: 12px; }
-
+    .result-passed { color: #2D7A3A; font-weight: 600; font-size: 12px; }
+    .result-failed { color: #A32D2D; font-weight: 600; font-size: 12px; }
+    .result-tabled { color: var(--muted); font-weight: 600; font-size: 12px; }
+    .result-other { color: var(--muted); font-size: 12px; }
     .desc-text { color: var(--text); }
     .sponsor-text { color: var(--muted); font-size: 12px; margin-top: 2px; }
-
-    /* ── EMPTY ── */
     .empty { text-align: center; padding: 48px 24px; color: var(--muted); }
     .empty-icon { font-size: 36px; margin-bottom: 12px; }
     .empty h3 { font-size: 16px; color: var(--text); margin-bottom: 6px; }
-
-    /* ── FOOTER ── */
     .site-footer { background: var(--deep); color: rgba(255,255,255,.6); padding: 28px 24px; margin-top: 40px; font-size: 12px; line-height: 1.6; }
     .footer-inner { max-width: 960px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-start; }
     .footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--white); margin-bottom: 4px; letter-spacing: 1px; }
-    .footer-disclaimer strong { color: var(--yellow); }
     .footer-disclaimer { max-width: 440px; }
+    .footer-disclaimer strong { color: var(--yellow); }
     .footer-links a { color: var(--yellow); text-decoration: none; display: block; margin-bottom: 4px; font-weight: 600; }
-
-    @media (max-width: 600px) {
-      .hero, .main { padding: 20px 14px; }
-      th:nth-child(2), td:nth-child(2) { display: none; }
-    }
+    @media (max-width: 600px) { .hero, .main { padding: 20px 14px; } th:nth-child(2), td:nth-child(2) { display: none; } }
   </style>
 </head>
 <body>
-
 <header class="site-header">
   <a class="header-brand" href="#">
     <div class="header-logo">CP</div>
@@ -234,7 +190,6 @@
     </div>
   </div>
 </footer>
-
 <script>
 let data = null;
 let activeCommittee = 'all';
@@ -267,17 +222,14 @@ function resultClass(r) {
 }
 
 function init() {
-  // last updated
   const lu = new Date(data.last_updated);
   document.getElementById('last-updated').textContent = 'Updated ' + fmtShort(data.last_updated.split('T')[0]);
 
-  // count meetings per committee
   const counts = { all: data.meetings.length };
   data.committees.forEach(c => {
     counts[c.id] = data.meetings.filter(m => m.committee_id === c.id).length;
   });
 
-  // build committee tabs
   const tabsEl = document.getElementById('committee-tabs');
   let tabsHTML = `<div class="c-tab active" data-id="all" onclick="setCommittee('all',this)">All Committees <span class="c-count">${counts.all}</span></div>`;
   data.committees.forEach(c => {
@@ -285,7 +237,6 @@ function init() {
   });
   tabsEl.innerHTML = tabsHTML;
 
-  // populate district filter
   const districts = new Set();
   data.meetings.forEach(m => m.outcomes.forEach(o => o.districts.forEach(d => districts.add(d))));
   const distSel = document.getElementById('district-filter');
@@ -293,14 +244,12 @@ function init() {
     distSel.innerHTML += `<option value="${d}">District ${d}</option>`;
   });
 
-  // populate date filter
   const dates = [...new Set(data.meetings.map(m => m.date))].sort().reverse();
   const dateSel = document.getElementById('date-filter');
   dates.forEach(d => {
     dateSel.innerHTML += `<option value="${d}">${fmt(d)}</option>`;
   });
 
-  // hero stats
   const totalMeetings = data.meetings.length;
   const totalOutcomes = data.meetings.reduce((s,m) => s + m.outcomes.length, 0);
   const totalNDF = data.meetings.reduce((s,m) => s + m.outcomes.filter(o=>o.type==='NDF').reduce((a,o)=>a+(o.amount||0),0), 0);
@@ -311,7 +260,6 @@ function init() {
     <div class="stat-pill">NDF: <span>${money(totalNDF)}</span></div>
   `;
 
-  // events
   document.getElementById('search').addEventListener('input', render);
   document.getElementById('district-filter').addEventListener('change', render);
   document.getElementById('date-filter').addEventListener('change', render);
@@ -323,7 +271,6 @@ function setCommittee(id, el) {
   activeCommittee = id;
   document.querySelectorAll('.c-tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
-  // reset filters
   document.getElementById('search').value = '';
   document.getElementById('district-filter').value = '';
   document.getElementById('date-filter').value = '';
@@ -335,7 +282,6 @@ function render() {
   const district = document.getElementById('district-filter').value;
   const dateFilter = document.getElementById('date-filter').value;
 
-  // committee header
   if (activeCommittee === 'all') {
     document.getElementById('committee-title').textContent = 'All Committees';
     document.getElementById('committee-desc').textContent = 'Every Louisville Metro Council committee meeting — spending, zoning, ordinances, resolutions, and policy decisions.';
@@ -345,18 +291,13 @@ function render() {
     document.getElementById('committee-desc').textContent = c ? c.description : '';
   }
 
-  // filter meetings
   const meetings = data.meetings.filter(m => {
     if (activeCommittee !== 'all' && m.committee_id !== activeCommittee) return false;
     if (dateFilter && m.date !== dateFilter) return false;
     return true;
   });
 
-  // filter outcomes within each meeting
-  let totalItems = 0;
-  let totalMoney = 0;
-  let passed = 0;
-  let failed = 0;
+  let totalItems = 0, totalMoney = 0, passed = 0, failed = 0;
   let html = '';
 
   meetings.forEach(meeting => {
@@ -424,15 +365,10 @@ function render() {
     html = `<div class="empty"><div class="empty-icon">🔍</div><h3>No results found</h3><p>Try adjusting your search or filters.</p></div>`;
   }
 
-  // summary cards
   document.getElementById('summary-row').innerHTML = `
     <div class="s-card c1">
       <div class="s-label">Meetings Shown</div>
-      <div class="s-value">${meetings.filter(m => m.outcomes.some(o => {
-        if (district && !o.districts.includes(district) && o.districts.length > 0) return false;
-        if (search) { const hay = [o.recipient,o.description,o.sponsor,...o.districts.map(d=>'district '+d)].join(' ').toLowerCase(); return hay.includes(search); }
-        return true;
-      })).length}</div>
+      <div class="s-value">${meetings.length}</div>
       <div class="s-sub">${totalItems} agenda items</div>
     </div>
     <div class="s-card c2">
