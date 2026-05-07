@@ -1,503 +1,70 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CivicPulse Louisville — Center for Neighborhoods</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --deep:    #2C1244;
-      --mid:     #512873;
-      --light:   #7459A4;
-      --yellow:  #FFD477;
-      --coral:   #F27768;
-      --peach:   #FAB88A;
-      --white:   #FFFFFF;
-      --off:     #F7F5FA;
-      --border:  #E2DCF0;
-      --text:    #1A1025;
-      --muted:   #6B5F7A;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Raleway', sans-serif; background: var(--off); color: var(--text); min-height: 100vh; }
-
-    /* ── HEADER ── */
-    .site-header {
-      background: var(--deep);
-      padding: 0 24px;
-      display: flex;
-      align-items: stretch;
-      justify-content: space-between;
-      gap: 16px;
-      position: sticky; top: 0; z-index: 100;
-      border-bottom: 3px solid var(--yellow);
-    }
-    .header-brand { display: flex; align-items: center; gap: 14px; padding: 14px 0; text-decoration: none; }
-    .header-logo-mark {
-      width: 36px; height: 36px;
-      background: var(--yellow);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 18px; color: var(--deep); flex-shrink: 0;
-      letter-spacing: 0;
-    }
-    .header-titles { display: flex; flex-direction: column; }
-    .header-title { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--white); letter-spacing: 1px; line-height: 1; }
-    .header-subtitle { font-size: 10px; color: var(--yellow); font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
-    .header-meta { display: flex; align-items: center; gap: 6px; }
-    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ADE80; animation: pulse 2s infinite; flex-shrink: 0; }
-    @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.4;} }
-    .status-text { font-size: 11px; color: rgba(255,255,255,.6); font-weight: 500; }
-
-    /* ── HERO ── */
-    .hero {
-      background: linear-gradient(135deg, var(--deep) 0%, var(--mid) 100%);
-      padding: 40px 24px 32px;
-      position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(116,89,164,.25) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-inner { max-width: 900px; margin: 0 auto; position: relative; }
-    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(36px,6vw,64px); color: var(--white); line-height: 1; letter-spacing: 1px; margin-bottom: 8px; }
-    .hero h1 span { color: var(--yellow); }
-    .hero-desc { font-size: 15px; color: rgba(255,255,255,.75); max-width: 560px; line-height: 1.6; margin-bottom: 24px; font-weight: 500; }
-    .hero-stats { display: flex; flex-wrap: wrap; gap: 12px; }
-    .stat-pill {
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.15);
-      border-radius: 99px;
-      padding: 6px 16px;
-      font-size: 13px; color: var(--white); font-weight: 600;
-    }
-    .stat-pill span { color: var(--yellow); }
-
-    /* ── TOOLBAR ── */
-    .toolbar {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
-      display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
-    }
-    .toolbar-inner { max-width: 900px; margin: 0 auto; width: 100%; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-    .search-wrap { position: relative; flex: 1; min-width: 180px; }
-    .search-wrap input {
-      width: 100%; padding: 8px 12px 8px 36px;
-      border: 1px solid var(--border); border-radius: 8px;
-      font-family: 'Raleway', sans-serif; font-size: 13px; color: var(--text);
-      background: var(--off);
-      outline: none; transition: border-color .2s;
-    }
-    .search-wrap input:focus { border-color: var(--light); background: var(--white); }
-    .search-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); font-size: 15px; color: var(--muted); pointer-events: none; }
-    select {
-      padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px;
-      font-family: 'Raleway', sans-serif; font-size: 13px; color: var(--text);
-      background: var(--off); outline: none; cursor: pointer;
-      transition: border-color .2s;
-    }
-    select:focus { border-color: var(--light); }
-    .filter-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .tag {
-      padding: 5px 13px; border-radius: 99px; font-size: 12px; font-weight: 600;
-      border: 1.5px solid var(--border); background: var(--white); color: var(--muted);
-      cursor: pointer; transition: all .15s;
-    }
-    .tag:hover { border-color: var(--light); color: var(--mid); }
-    .tag.active { background: var(--deep); color: var(--white); border-color: var(--deep); }
-    .tag.ndf.active { background: var(--mid); border-color: var(--mid); }
-    .tag.cif.active { background: var(--light); border-color: var(--light); }
-
-    /* ── MAIN LAYOUT ── */
-    .main { max-width: 900px; margin: 0 auto; padding: 24px; }
-
-    /* ── SUMMARY CARDS ── */
-    .summary-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-bottom: 24px; }
-    .s-card {
-      background: var(--white); border: 1px solid var(--border); border-radius: 12px;
-      padding: 16px; position: relative; overflow: hidden;
-    }
-    .s-card::after {
-      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
-    }
-    .s-card.total::after { background: var(--deep); }
-    .s-card.ndf::after { background: var(--mid); }
-    .s-card.cif::after { background: var(--coral); }
-    .s-card.meetings::after { background: var(--yellow); }
-    .s-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-bottom: 6px; }
-    .s-value { font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--deep); line-height: 1; }
-    .s-sub { font-size: 11px; color: var(--muted); margin-top: 3px; font-weight: 500; }
-
-    /* ── MEETING GROUPS ── */
-    .meeting-group { margin-bottom: 28px; }
-    .meeting-header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 12px 16px;
-      background: var(--deep); color: var(--white);
-      border-radius: 10px 10px 0 0;
-      gap: 12px; flex-wrap: wrap;
-    }
-    .meeting-date-block { display: flex; flex-direction: column; }
-    .meeting-date { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: .5px; }
-    .meeting-committee { font-size: 11px; color: var(--yellow); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
-    .meeting-links { display: flex; gap: 8px; }
-    .meeting-link {
-      font-size: 11px; font-weight: 700; padding: 5px 12px;
-      border-radius: 99px; text-decoration: none; letter-spacing: .5px;
-      background: rgba(255,255,255,.12); color: var(--white);
-      border: 1px solid rgba(255,255,255,.2);
-      transition: background .15s;
-    }
-    .meeting-link:hover { background: rgba(255,255,255,.22); }
-
-    /* ── TABLE ── */
-    .table-wrap { background: var(--white); border: 1px solid var(--border); border-top: none; border-radius: 0 0 10px 10px; overflow: hidden; }
-    table { width: 100%; border-collapse: collapse; }
-    thead tr { background: var(--off); border-bottom: 1px solid var(--border); }
-    th { padding: 10px 14px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--muted); text-align: left; white-space: nowrap; }
-    tbody tr { border-bottom: 1px solid var(--border); transition: background .1s; }
-    tbody tr:last-child { border-bottom: none; }
-    tbody tr:hover { background: var(--off); }
-    td { padding: 12px 14px; font-size: 13px; vertical-align: top; line-height: 1.4; }
-    .type-badge {
-      display: inline-block; font-size: 10px; font-weight: 700;
-      padding: 2px 8px; border-radius: 99px;
-      letter-spacing: .5px; white-space: nowrap;
-    }
-    .type-ndf { background: #EDE5F5; color: var(--mid); }
-    .type-cif { background: #FDE8E5; color: #B5341F; }
-    .districts-cell { display: flex; flex-wrap: wrap; gap: 4px; }
-    .district-tag {
-      font-size: 11px; font-weight: 700;
-      background: var(--deep); color: var(--white);
-      padding: 1px 7px; border-radius: 4px;
-    }
-    .amount-cell { font-family: 'Bebas Neue', sans-serif; font-size: 17px; color: var(--deep); white-space: nowrap; }
-    .vote-passed { color: #2D7A3A; font-weight: 600; font-size: 12px; }
-    .vote-other { color: var(--muted); font-weight: 500; font-size: 12px; }
-    .purpose-text { color: var(--text); }
-    .sponsor-text { color: var(--muted); font-size: 12px; margin-top: 3px; }
-
-    /* ── EMPTY STATE ── */
-    .empty { text-align: center; padding: 48px 24px; color: var(--muted); }
-    .empty-icon { font-size: 36px; margin-bottom: 12px; }
-    .empty h3 { font-size: 16px; color: var(--text); margin-bottom: 6px; }
-    .empty p { font-size: 13px; }
-
-    /* ── FOOTER ── */
-    .site-footer {
-      background: var(--deep); color: rgba(255,255,255,.6);
-      padding: 28px 24px; margin-top: 40px;
-      font-size: 12px; line-height: 1.6;
-    }
-    .footer-inner { max-width: 900px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; align-items: flex-start; }
-    .footer-brand { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: var(--white); margin-bottom: 4px; letter-spacing: 1px; }
-    .footer-disclaimer { max-width: 440px; }
-    .footer-disclaimer strong { color: var(--yellow); }
-    .footer-links a { color: var(--yellow); text-decoration: none; display: block; margin-bottom: 4px; font-weight: 600; }
-    .footer-links a:hover { text-decoration: underline; }
-
-    /* ── SUBSCRIBE BAR ── */
-    .subscribe-bar {
-      background: var(--yellow); padding: 16px 24px;
-      display: flex; align-items: center; justify-content: center;
-      gap: 16px; flex-wrap: wrap;
-    }
-    .subscribe-bar p { font-size: 14px; font-weight: 700; color: var(--deep); }
-    .subscribe-btn {
-      background: var(--deep); color: var(--white);
-      padding: 9px 22px; border-radius: 99px;
-      font-family: 'Raleway', sans-serif; font-size: 13px; font-weight: 700;
-      text-decoration: none; letter-spacing: .5px;
-      transition: background .15s;
-    }
-    .subscribe-btn:hover { background: var(--mid); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      .hero { padding: 28px 16px 24px; }
-      .main { padding: 16px; }
-      th:nth-child(4), td:nth-child(4) { display: none; }
-    }
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.5">
+  <style type="text/css">
+    body {background-color: #f5f2f9}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #210c34; -webkit-text-stroke: #210c34}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 22.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #fecc64; -webkit-text-stroke: #fecc64}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #140d1c; -webkit-text-stroke: #140d1c; background-color: #41db6d; min-height: 15.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.6); -webkit-text-stroke: rgba(255, 255, 255, 0.6)}
+    p.p7 {margin: 0.0px 0.0px 20.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.75); -webkit-text-stroke: rgba(255, 255, 255, 0.75)}
+    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #ffffff; background-color: rgba(255, 255, 255, 0.1)}
+    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #210c34; -webkit-text-stroke: #210c34}
+    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #210c34}
+    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #140d1c; -webkit-text-stroke: #140d1c; background-color: #ffffff; min-height: 15.0px}
+    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px '.Apple Color Emoji UI'; color: #584b67; -webkit-text-stroke: #584b67}
+    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #140d1c; -webkit-text-stroke: #140d1c; background-color: #f5f2f9}
+    p.p14 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #584b67; -webkit-text-stroke: #584b67; min-height: 15.0px}
+    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 28.0px 'Helvetica Neue'; color: #210c34; -webkit-text-stroke: #210c34; min-height: 33.0px}
+    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #584b67; -webkit-text-stroke: #584b67; min-height: 16.0px}
+    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #140d1c; -webkit-text-stroke: #140d1c; min-height: 15.0px}
+    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
+    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.6); -webkit-text-stroke: rgba(255, 255, 255, 0.6)}
+    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #fecc64; -webkit-text-stroke: #fecc64}
+    span.s1 {font-kerning: none; background-color: #fecc64}
+    span.s2 {font-kerning: none; background-color: #210c34}
+    span.s3 {font-kerning: none}
+    span.s4 {font-kerning: none; color: #fecc64; -webkit-text-stroke: 0px #fecc64}
+    span.s5 {text-decoration: underline ; font-kerning: none}
+    span.s6 {font: 13.0px '.Apple Color Emoji UI'; font-kerning: none; background-color: #fecc64}
+    span.s7 {font-kerning: none; color: #ffffff; background-color: #210c34; -webkit-text-stroke: 0px #ffffff}
+    span.s8 {font-kerning: none; background-color: #ffffff}
+    span.s9 {font-kerning: none; color: #fecc64; background-color: #210c34; -webkit-text-stroke: 0px #fecc64}
+    span.s10 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #fecc64; -webkit-text-stroke: 0px #fecc64}
   </style>
 </head>
 <body>
-
-<!-- HEADER -->
-<header class="site-header">
-  <a class="header-brand" href="#">
-    <div class="header-logo-mark">CP</div>
-    <div class="header-titles">
-      <div class="header-title">CivicPulse Louisville</div>
-      <div class="header-subtitle">A Center for Neighborhoods Initiative</div>
-    </div>
-  </a>
-  <div class="header-meta">
-    <div class="status-dot"></div>
-    <span class="status-text" id="last-updated">Loading…</span>
-  </div>
-</header>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <h1>Your neighborhood.<br><span>Your money.</span> Your Metro Council.</h1>
-    <p class="hero-desc">Track how Louisville Metro Council spends Neighborhood Development Fund dollars — meeting by meeting, district by district, in plain English.</p>
-    <div class="hero-stats" id="hero-stats">
-      <div class="stat-pill">Loading data…</div>
-    </div>
-  </div>
-</section>
-
-<!-- SUBSCRIBE BAR -->
-<div class="subscribe-bar">
-  <p>📬 Get the weekly Neighborhood Pulse digest — what happened at Metro Council, by district.</p>
-  <a href="https://centerforneighborhoods.org/civicpulse/subscribe" class="subscribe-btn">Subscribe Free</a>
-</div>
-
-<!-- TOOLBAR -->
-<div class="toolbar">
-  <div class="toolbar-inner">
-    <div class="search-wrap">
-      <span class="search-icon">🔍</span>
-      <input type="text" id="search" placeholder="Search by recipient, purpose, or district…">
-    </div>
-    <select id="district-filter">
-      <option value="">All Districts</option>
-    </select>
-    <select id="date-filter">
-      <option value="">All Dates</option>
-    </select>
-    <div class="filter-tags">
-      <button class="tag active" data-type="all">All</button>
-      <button class="tag ndf" data-type="NDF">NDF</button>
-      <button class="tag cif" data-type="CIF">CIF</button>
-    </div>
-  </div>
-</div>
-
-<!-- MAIN -->
-<main class="main">
-  <div class="summary-row" id="summary-row"></div>
-  <div id="results"></div>
-</main>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div>
-      <div class="footer-brand">Center for Neighborhoods</div>
-      <div class="footer-disclaimer">
-        <strong>CivicPulse</strong> is a civic transparency initiative by the Center for Neighborhoods. Data is pulled automatically from Louisville Metro's public meeting records. AI-generated summaries are provided for convenience — always verify with the original source documents. This is civic education, not legal or financial advice.
-      </div>
-    </div>
-    <div class="footer-links">
-      <a href="https://centerforneighborhoods.org">centerforneighborhoods.org</a>
-      <a href="https://louisvilleky.primegov.com/public/portal">Louisville Metro Meeting Portal</a>
-      <a href="https://louisvilleky.new.swagit.com">Louisville Metro Video Archive</a>
-      <a href="mailto:mikalf@centerforneighborhoods.org">Contact CFN</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-let allData = [];
-let activeType = 'all';
-
-async function loadData() {
-  try {
-    const res = await fetch('data/meetings.json');
-    const data = await res.json();
-    allData = data;
-    init(data);
-  } catch(e) {
-    document.getElementById('results').innerHTML = '<div class="empty"><div class="empty-icon">⚠️</div><h3>Data unavailable</h3><p>Unable to load meeting data. Please try again later.</p></div>';
-  }
-}
-
-function formatDate(dateStr) {
-  const d = new Date(dateStr + 'T00:00:00');
-  return d.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-}
-
-function formatMoney(n) {
-  return '$' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-}
-
-function init(data) {
-  // Last updated
-  const lu = new Date(data.last_updated);
-  document.getElementById('last-updated').textContent = 'Updated ' + lu.toLocaleDateString('en-US', { month:'short', day:'numeric', year:'numeric' });
-
-  // Populate filters
-  const districts = new Set();
-  const dates = [];
-  let totalNDF = 0, totalCIF = 0, totalItems = 0;
-
-  data.meetings.forEach(m => {
-    dates.push({ value: m.date, label: formatDate(m.date) });
-    m.appropriations.forEach(a => {
-      a.districts.forEach(d => districts.add(d));
-      if (a.type === 'NDF') totalNDF += a.amount;
-      if (a.type === 'CIF') totalCIF += a.amount;
-      totalItems++;
-    });
-  });
-
-  // District dropdown
-  const distSel = document.getElementById('district-filter');
-  Array.from(districts).sort((a,b) => parseInt(a)-parseInt(b)).forEach(d => {
-    const o = document.createElement('option');
-    o.value = d; o.textContent = 'District ' + d;
-    distSel.appendChild(o);
-  });
-
-  // Date dropdown
-  const dateSel = document.getElementById('date-filter');
-  dates.forEach(d => {
-    const o = document.createElement('option');
-    o.value = d.value; o.textContent = d.label;
-    dateSel.appendChild(o);
-  });
-
-  // Hero stats
-  document.getElementById('hero-stats').innerHTML = `
-    <div class="stat-pill"><span>${data.meetings.length}</span> meetings tracked</div>
-    <div class="stat-pill"><span>${totalItems}</span> appropriation items</div>
-    <div class="stat-pill">NDF: <span>${formatMoney(totalNDF)}</span></div>
-    <div class="stat-pill">CIF: <span>${formatMoney(totalCIF)}</span></div>
-  `;
-
-  // Summary cards
-  document.getElementById('summary-row').innerHTML = `
-    <div class="s-card total">
-      <div class="s-label">Total Appropriated</div>
-      <div class="s-value">${'$' + Math.round(totalNDF+totalCIF).toLocaleString()}</div>
-      <div class="s-sub">across all meetings shown</div>
-    </div>
-    <div class="s-card ndf">
-      <div class="s-label">NDF Funds</div>
-      <div class="s-value">${'$' + Math.round(totalNDF).toLocaleString()}</div>
-      <div class="s-sub">Neighborhood Development Fund</div>
-    </div>
-    <div class="s-card cif">
-      <div class="s-label">CIF Funds</div>
-      <div class="s-value">${'$' + Math.round(totalCIF).toLocaleString()}</div>
-      <div class="s-sub">Capital Infrastructure Fund</div>
-    </div>
-    <div class="s-card meetings">
-      <div class="s-label">Meetings</div>
-      <div class="s-value">${data.meetings.length}</div>
-      <div class="s-sub">${totalItems} line items total</div>
-    </div>
-  `;
-
-  render();
-
-  // Events
-  document.getElementById('search').addEventListener('input', render);
-  document.getElementById('district-filter').addEventListener('change', render);
-  document.getElementById('date-filter').addEventListener('change', render);
-  document.querySelectorAll('.tag').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.tag').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      activeType = btn.dataset.type;
-      render();
-    });
-  });
-}
-
-function render() {
-  const search = document.getElementById('search').value.toLowerCase();
-  const district = document.getElementById('district-filter').value;
-  const dateFilter = document.getElementById('date-filter').value;
-  const container = document.getElementById('results');
-  let html = '';
-  let totalShown = 0;
-
-  allData.meetings.forEach(meeting => {
-    if (dateFilter && meeting.date !== dateFilter) return;
-
-    const items = meeting.appropriations.filter(a => {
-      if (activeType !== 'all' && a.type !== activeType) return false;
-      if (district && !a.districts.includes(district)) return false;
-      if (search) {
-        const haystack = [a.recipient, a.purpose, a.sponsor, ...a.districts.map(d=>'district '+d)].join(' ').toLowerCase();
-        if (!haystack.includes(search)) return false;
-      }
-      return true;
-    });
-
-    if (!items.length) return;
-    totalShown += items.length;
-
-    html += `
-      <div class="meeting-group">
-        <div class="meeting-header">
-          <div class="meeting-date-block">
-            <div class="meeting-date">${formatDate(meeting.date)}</div>
-            <div class="meeting-committee">${meeting.committee}</div>
-          </div>
-          <div class="meeting-links">
-            <a href="${meeting.video_url}" target="_blank" class="meeting-link">Watch Video</a>
-          </div>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead><tr>
-              <th>Type</th>
-              <th>Districts</th>
-              <th>Recipient &amp; Purpose</th>
-              <th>Amount</th>
-              <th>Vote</th>
-            </tr></thead>
-            <tbody>
-              ${items.map(a => `
-                <tr>
-                  <td><span class="type-badge type-${a.type.toLowerCase()}">${a.type}</span></td>
-                  <td>
-                    <div class="districts-cell">
-                      ${a.districts.map(d => `<span class="district-tag">${d}</span>`).join('')}
-                    </div>
-                  </td>
-                  <td>
-                    <div class="purpose-text">${a.recipient} — ${a.purpose}</div>
-                    <div class="sponsor-text">${a.sponsor}</div>
-                  </td>
-                  <td><div class="amount-cell">${formatMoney(a.amount)}</div></td>
-                  <td>
-                    <span class="${a.vote.toLowerCase().includes('passed') ? 'vote-passed' : 'vote-other'}">
-                      ${a.vote}
-                    </span>
-                  </td>
-                </tr>
-              `).join('')}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    `;
-  });
-
-  if (!totalShown) {
-    html = `<div class="empty">
-      <div class="empty-icon">🔍</div>
-      <h3>No results found</h3>
-      <p>Try adjusting your search or filters.</p>
-    </div>`;
-  }
-
-  container.innerHTML = html;
-}
-
-loadData();
-</script>
+<p class="p1"><span class="s1">CP</span></p>
+<p class="p2"><span class="s2">CivicPulse Louisville</span></p>
+<p class="p3"><span class="s2">A CENTER FOR NEIGHBORHOODS INITIATIVE</span></p>
+<p class="p4"><span class="s3"></span><br></p>
+<p class="p5"><span class="s2">Loading…</span></p>
+<h1 style="margin: 0.0px 0.0px 8.0px 0.0px; font: 40.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff"><span class="s3">Every meeting.<br>
+</span><span class="s4">Every vote.</span><span class="s3"> Every district.</span></h1>
+<p class="p7"><span class="s3">Track Louisville Metro Council across all committees — spending, zoning, ordinances, and more — in plain English, updated automatically.</span></p>
+<p class="p8"><span class="s3">Loading…</span><span class="s5">u</span></p>
+<p class="p9"><span class="s6">📬</span><span class="s1"> Get the weekly Neighborhood Pulse — what happened at Metro Council, by district.</span></p>
+<p class="p10"><span class="s3"><a href="https://centerforneighborhoods.org/civicpulse/subscribe">Subscribe Free<span class="s7"></span></a></span></p>
+<p class="p11"><span class="s3"></span><br></p>
+<p class="p12"><span class="s8">🔍</span></p>
+<p class="p13"><span class="s3">All Districts</span></p>
+<p class="p13"><span class="s3">All Dates</span></p>
+<p class="p14"><span class="s3"></span><br></p>
+<p class="p15"><span class="s3"></span><br></p>
+<p class="p16"><span class="s3"></span><br></p>
+<p class="p17"><span class="s3"></span><br></p>
+<p class="p18"><span class="s2">Center for Neighborhoods</span></p>
+<p class="p19"><span class="s9">CivicPulse</span><span class="s2"> is a civic transparency initiative by the Center for Neighborhoods. Data is pulled automatically from Louisville Metro's public meeting records. AI-generated summaries are for convenience — always verify with original source documents.</span></p>
+<p class="p20"><span class="s2"><a href="https://centerforneighborhoods.org/">centerforneighborhoods.org<span class="s10"></span></a></span></p>
+<p class="p20"><span class="s2"><a href="https://louisvilleky.primegov.com/public/portal">Louisville Metro Meeting Portal<span class="s10"></span></a></span></p>
+<p class="p20"><span class="s2"><a href="https://louisvilleky.new.swagit.com/">Louisville Metro Video Archive<span class="s10"></span></a></span></p>
+<p class="p20"><span class="s2"><a href="mailto:mikalf@centerforneighborhoods.org">Contact CFN<span class="s10"></span></a></span></p>
 </body>
 </html>
