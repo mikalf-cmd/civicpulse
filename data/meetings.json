@@ -1,1 +1,299 @@
-{"last_updated":"2026-05-07T06:00:00","committees":[{"id":"appropriations","name":"Appropriations Committee","description":"Reviews and approves NDF and CIF spending requests from Metro Council members."},{"id":"planning","name":"Planning Commission","description":"Reviews zoning changes, land use applications, and development proposals."},{"id":"full-council","name":"Metro Council","description":"Full Metro Council meetings — ordinances, resolutions, and final votes."},{"id":"budget","name":"Budget Committee","description":"Reviews the Metro budget, amendments, and fiscal policy."},{"id":"public-safety","name":"Public Safety Committee","description":"Oversees LMPD, fire, EMS, and public safety policy."},{"id":"land-development","name":"Land Development & Transportation","description":"Reviews land development codes, transportation policy, and infrastructure."}],"meetings":[{"id":"386028","date":"2026-05-06","committee_id":"appropriations","committee":"Appropriations Committee","video_url":"https://louisvilleky.new.swagit.com/videos/386028","outcomes":[{"item":1,"type":"NDF","amount":636.60,"districts":["5"],"recipient":"Public Works","description":"Installation of one street light near 806 South 35th Street","sponsor":"Councilmember Purvis","result":"Passed"},{"item":2,"type":"NDF","amount":4117.33,"districts":["7"],"recipient":"Office of Equity","description":"Activities related to the Juneteenth Jubilee","sponsor":"Councilmember McCraney","result":"Passed (amended)"},{"item":3,"type":"NDF","amount":12000.00,"districts":["3","6","7","8","9","12","15","17","20","24"],"recipient":"Louisville Independent Business Alliance","description":"2026 Buy Local Fair","sponsor":"Multiple councilmembers","result":"Passed"},{"item":4,"type":"NDF","amount":20000.00,"districts":["12","13","14","25"],"recipient":"Southwest Music Series","description":"Inaugural Southwest Music Series community events","sponsor":"Multiple councilmembers","result":"Passed"}]},{"id":"385100","date":"2026-04-22","committee_id":"appropriations","committee":"Appropriations Committee","video_url":"https://louisvilleky.new.swagit.com/videos/385100","outcomes":[{"item":1,"type":"NDF","amount":25000.00,"districts":["4"],"recipient":"Shawnee Neighborhood Association","description":"Neighborhood beautification and community garden project","sponsor":"Councilmember James","result":"Passed"},{"item":2,"type":"CIF","amount":75000.00,"districts":["1","2","3"],"recipient":"Public Works","description":"Street resurfacing — West Louisville corridors","sponsor":"Council leadership","result":"Passed"}]},{"id":"385900","date":"2026-05-01","committee_id":"planning","committee":"Planning Commission","video_url":"https://louisvilleky.new.swagit.com/videos/385900","outcomes":[{"item":1,"type":"ZONE","amount":null,"districts":["9"],"recipient":"2847 Portland Ave","description":"Rezoning from R-5 to C-1 for mixed-use development","sponsor":"","result":"Approved with conditions"},{"item":2,"type":"ZONE","amount":null,"districts":["4"],"recipient":"1200 block of South 28th Street","description":"Conditional use permit for community garden space","sponsor":"","result":"Approved"},{"item":3,"type":"ZONE","amount":null,"districts":["15"],"recipient":"4400 Dixie Highway","description":"Variance request for signage height","sponsor":"","result":"Denied"}]},{"id":"385700","date":"2026-04-28","committee_id":"full-council","committee":"Metro Council","video_url":"https://louisvilleky.new.swagit.com/videos/385700","outcomes":[{"item":1,"type":"ORDINANCE","amount":null,"districts":[],"recipient":"Ordinance 2026-014","description":"Amendment to Metro Code Title 9 — updating sidewalk maintenance responsibilities","sponsor":"Councilmember Flood","result":"Passed 21-5"},{"item":2,"type":"RESOLUTION","amount":null,"districts":[],"recipient":"Resolution 2026-022","description":"Recognizing May as Asian American and Pacific Islander Heritage Month","sponsor":"Councilmember Yates","result":"Passed unanimously"},{"item":3,"type":"ORDINANCE","amount":null,"districts":[],"recipient":"Ordinance 2026-015","description":"Short-term rental licensing and fee schedule update","sponsor":"Councilmember Hollander","result":"Tabled"}]},{"id":"385400","date":"2026-04-15","committee_id":"budget","committee":"Budget Committee","video_url":"https://louisvilleky.new.swagit.com/videos/385400","outcomes":[{"item":1,"type":"BUDGET","amount":null,"districts":[],"recipient":"Louisville Metro Government FY2027","description":"First reading of proposed FY2027 operating budget — $1.2B total","sponsor":"Mayor's Office","result":"Referred to full council"},{"item":2,"type":"BUDGET","amount":4200000.00,"districts":["1","2","3","4","5","6"],"recipient":"West Louisville Infrastructure Fund","description":"Proposed $4.2M amendment for West Louisville road and sidewalk improvements","sponsor":"Multiple councilmembers","result":"Approved in committee"}]},{"id":"385200","date":"2026-04-10","committee_id":"public-safety","committee":"Public Safety Committee","video_url":"https://louisvilleky.new.swagit.com/videos/385200","outcomes":[{"item":1,"type":"POLICY","amount":null,"districts":[],"recipient":"LMPD Use of Force Policy","description":"Review and discussion of updated LMPD use of force policy","sponsor":"","result":"Discussion only"},{"item":2,"type":"RESOLUTION","amount":null,"districts":["20","21","22","23","24","25","26"],"recipient":"South Louisville Safe Streets Initiative","description":"Resolution supporting expanded traffic calming measures in South Louisville","sponsor":"Councilmember Costello","result":"Passed"}]},{"id":"385000","date":"2026-04-08","committee_id":"land-development","committee":"Land Development & Transportation","video_url":"https://louisvilleky.new.swagit.com/videos/385000","outcomes":[{"item":1,"type":"POLICY","amount":null,"districts":[],"recipient":"Land Development Code Amendment","description":"Proposed amendments to accessory dwelling unit regulations — expand permitted zones","sponsor":"Planning & Design","result":"Approved with amendments"},{"item":2,"type":"POLICY","amount":null,"districts":["9","10","11"],"recipient":"Portland Avenue Corridor Study","description":"Presentation of Portland Avenue transportation corridor study findings","sponsor":"","result":"Received and filed"}]}]}
+{
+  "last_updated": "2026-05-08T11:24:41",
+  "meetings": [
+    {
+      "id": "386028",
+      "date": "2026-05-06",
+      "committee_id": "appropriations",
+      "committee": "Appropriations Committee",
+      "video_url": "https://louisvilleky.new.swagit.com/videos/386028",
+      "outcomes": [
+        {
+          "item": 1,
+          "type": "NDF",
+          "amount": 636.6,
+          "districts": [
+            "5"
+          ],
+          "recipient": "Public Works",
+          "description": "Installation of one street light near 806 South 35th Street",
+          "sponsor": "Councilmember Purvis",
+          "result": "Passed"
+        },
+        {
+          "item": 2,
+          "type": "NDF",
+          "amount": 4117.33,
+          "districts": [
+            "7"
+          ],
+          "recipient": "Office of Equity",
+          "description": "Activities related to the Juneteenth Jubilee",
+          "sponsor": "Councilmember McCraney",
+          "result": "Passed (amended)"
+        },
+        {
+          "item": 3,
+          "type": "NDF",
+          "amount": 12000.0,
+          "districts": [
+            "3",
+            "6",
+            "7",
+            "8",
+            "9",
+            "12",
+            "15",
+            "17",
+            "20",
+            "24"
+          ],
+          "recipient": "Louisville Independent Business Alliance",
+          "description": "2026 Buy Local Fair",
+          "sponsor": "Multiple councilmembers",
+          "result": "Passed"
+        },
+        {
+          "item": 4,
+          "type": "NDF",
+          "amount": 20000.0,
+          "districts": [
+            "12",
+            "13",
+            "14",
+            "25"
+          ],
+          "recipient": "Southwest Music Series",
+          "description": "Inaugural Southwest Music Series community events",
+          "sponsor": "Multiple councilmembers",
+          "result": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "385100",
+      "date": "2026-04-22",
+      "committee_id": "appropriations",
+      "committee": "Appropriations Committee",
+      "video_url": "https://louisvilleky.new.swagit.com/videos/385100",
+      "outcomes": [
+        {
+          "item": 1,
+          "type": "NDF",
+          "amount": 25000.0,
+          "districts": [
+            "4"
+          ],
+          "recipient": "Shawnee Neighborhood Association",
+          "description": "Neighborhood beautification and community garden project",
+          "sponsor": "Councilmember James",
+          "result": "Passed"
+        },
+        {
+          "item": 2,
+          "type": "CIF",
+          "amount": 75000.0,
+          "districts": [
+            "1",
+            "2",
+            "3"
+          ],
+          "recipient": "Public Works",
+          "description": "Street resurfacing \u2014 West Louisville corridors",
+          "sponsor": "Council leadership",
+          "result": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "385900",
+      "date": "2026-05-01",
+      "committee_id": "planning",
+      "committee": "Planning Commission",
+      "video_url": "https://louisvilleky.new.swagit.com/videos/385900",
+      "outcomes": [
+        {
+          "item": 1,
+          "type": "ZONE",
+          "amount": null,
+          "districts": [
+            "9"
+          ],
+          "recipient": "2847 Portland Ave",
+          "description": "Rezoning from R-5 to C-1 for mixed-use development",
+          "sponsor": "",
+          "result": "Approved with conditions"
+        },
+        {
+          "item": 2,
+          "type": "ZONE",
+          "amount": null,
+          "districts": [
+            "4"
+          ],
+          "recipient": "1200 block of South 28th Street",
+          "description": "Conditional use permit for community garden space",
+          "sponsor": "",
+          "result": "Approved"
+        },
+        {
+          "item": 3,
+          "type": "ZONE",
+          "amount": null,
+          "districts": [
+            "15"
+          ],
+          "recipient": "4400 Dixie Highway",
+          "description": "Variance request for signage height",
+          "sponsor": "",
+          "result": "Denied"
+        }
+      ]
+    },
+    {
+      "id": "385700",
+      "date": "2026-04-28",
+      "committee_id": "full-council",
+      "committee": "Metro Council",
+      "video_url": "https://louisvilleky.new.swagit.com/videos/385700",
+      "outcomes": [
+        {
+          "item": 1,
+          "type": "ORDINANCE",
+          "amount": null,
+          "districts": [],
+          "recipient": "Ordinance 2026-014",
+          "description": "Amendment to Metro Code Title 9 \u2014 updating sidewalk maintenance responsibilities",
+          "sponsor": "Councilmember Flood",
+          "result": "Passed 21-5"
+        },
+        {
+          "item": 2,
+          "type": "RESOLUTION",
+          "amount": null,
+          "districts": [],
+          "recipient": "Resolution 2026-022",
+          "description": "Recognizing May as Asian American and Pacific Islander Heritage Month",
+          "sponsor": "Councilmember Yates",
+          "result": "Passed unanimously"
+        },
+        {
+          "item": 3,
+          "type": "ORDINANCE",
+          "amount": null,
+          "districts": [],
+          "recipient": "Ordinance 2026-015",
+          "description": "Short-term rental licensing and fee schedule update",
+          "sponsor": "Councilmember Hollander",
+          "result": "Tabled"
+        }
+      ]
+    },
+    {
+      "id": "385400",
+      "date": "2026-04-15",
+      "committee_id": "budget",
+      "committee": "Budget Committee",
+      "video_url": "https://louisvilleky.new.swagit.com/videos/385400",
+      "outcomes": [
+        {
+          "item": 1,
+          "type": "BUDGET",
+          "amount": null,
+          "districts": [],
+          "recipient": "Louisville Metro Government FY2027",
+          "description": "First reading of proposed FY2027 operating budget \u2014 $1.2B total",
+          "sponsor": "Mayor's Office",
+          "result": "Referred to full council"
+        },
+        {
+          "item": 2,
+          "type": "BUDGET",
+          "amount": 4200000.0,
+          "districts": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ],
+          "recipient": "West Louisville Infrastructure Fund",
+          "description": "Proposed $4.2M amendment for West Louisville road and sidewalk improvements",
+          "sponsor": "Multiple councilmembers",
+          "result": "Approved in committee"
+        }
+      ]
+    },
+    {
+      "id": "385200",
+      "date": "2026-04-10",
+      "committee_id": "public-safety",
+      "committee": "Public Safety Committee",
+      "video_url": "https://louisvilleky.new.swagit.com/videos/385200",
+      "outcomes": [
+        {
+          "item": 1,
+          "type": "POLICY",
+          "amount": null,
+          "districts": [],
+          "recipient": "LMPD Use of Force Policy",
+          "description": "Review and discussion of updated LMPD use of force policy",
+          "sponsor": "",
+          "result": "Discussion only"
+        },
+        {
+          "item": 2,
+          "type": "RESOLUTION",
+          "amount": null,
+          "districts": [
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26"
+          ],
+          "recipient": "South Louisville Safe Streets Initiative",
+          "description": "Resolution supporting expanded traffic calming measures in South Louisville",
+          "sponsor": "Councilmember Costello",
+          "result": "Passed"
+        }
+      ]
+    },
+    {
+      "id": "385000",
+      "date": "2026-04-08",
+      "committee_id": "land-development",
+      "committee": "Land Development & Transportation",
+      "video_url": "https://louisvilleky.new.swagit.com/videos/385000",
+      "outcomes": [
+        {
+          "item": 1,
+          "type": "POLICY",
+          "amount": null,
+          "districts": [],
+          "recipient": "Land Development Code Amendment",
+          "description": "Proposed amendments to accessory dwelling unit regulations \u2014 expand permitted zones",
+          "sponsor": "Planning & Design",
+          "result": "Approved with amendments"
+        },
+        {
+          "item": 2,
+          "type": "POLICY",
+          "amount": null,
+          "districts": [
+            "9",
+            "10",
+            "11"
+          ],
+          "recipient": "Portland Avenue Corridor Study",
+          "description": "Presentation of Portland Avenue transportation corridor study findings",
+          "sponsor": "",
+          "result": "Received and filed"
+        }
+      ]
+    }
+  ]
+}
